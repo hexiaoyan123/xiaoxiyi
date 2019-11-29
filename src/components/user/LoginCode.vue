@@ -97,12 +97,12 @@ export default {
     let urlStr = window.location.href;
     let urlStrBase = urlStr.substring(0, urlStr.indexOf(this.$route.path));
     let backUrl = encodeURIComponent(urlStrBase + "/index");
-    // window.location.href =
-    //   this.$init.ip +
-    //   "/panda-common-gateway/v1/wechatLogin?redirectUrl=" +
-    //   backUrl +
-    //   "&channelId=" +
-    //   this.$init.channel.index;
+    window.location.href =
+      this.$init.ip +
+      "/panda-common-gateway/v1/wechatLogin?redirectUrl=" +
+      backUrl +
+      "&channelId=" +
+      this.$init.channel.index;
     return;
     // 2019-01-25 仅微信登陆结束
 

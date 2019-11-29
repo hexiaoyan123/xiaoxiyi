@@ -37,6 +37,7 @@
         <ul style="margin-top: 5px;">
           <li style="font-size: 14px; font-weight: 700; color: #BEBEBE;">您还不是推广员，暂无信息！</li>
         </ul>
+
         <ul style="margin-top: 5px;">
           <li @click="goPath('/article/detail/191106163453163417')">
             <p class="warn-content">
@@ -53,32 +54,43 @@
         @click="goPath('/user/realNameAuthentication')"
       >成为推广员</div>
     </div>
-    <div v-show="user.realName" style="font-size: 14px; font-weight: 700;">
+
+    <!-- 推广员列表信息 -->
+    <div v-show="user.realName" style="font-size: 13px; font-weight: 500;">
       <div style="padding-left: 10px; padding-top: 5px;">团队列表</div>
       <ul>
-        <li v-for="val in distributionUserList" :key="val.id" style="clear: both;">
-          <div style="float: left; margin-top: 5px; padding-left: 10px; width: 80px; height: 80px;">
+        <li
+          v-for="val in distributionUserList"
+          :key="val.id"
+          style="clear: both; height: 75px; border-bottom: 1px solid #eee;"
+        >
+          <div style="float: left; margin-top: 5px; padding-left: 10px; width: 60px; height: 60px;">
             <img style="border-radius: 50%; width: 100%; height: 100%;" :src="val.imageUrl" />
           </div>
-          <div style="float: left; padding-left: 10px;">
+          <div style="float: left; padding-left: 20px; margin-top: 10px; text-align: left;">
             <p style="margin-top: 10px;">{{val.nickname}}</p>
             <p style="margin-top: 5px;">{{val.phone}}</p>
           </div>
-          <div style="float: right; padding-right: 10px;">
+          <div style="float: right; padding-right: 20px; margin-top: 10px; text-align: left;">
             <p style="margin-top: 10px;">分销金额：{{val.distributionAmount | priceFormat}}</p>
             <p style="margin-top: 5px;">{{val.userLevelName}}</p>
           </div>
         </li>
       </ul>
-      <p
-        class="warn-content"
-        style="margin-top: 200px;"
-        @click="goPath('/article/detail/191106163453163417')"
-      >
-        <i>
-          <img src="../../assets/goods/warn.png" width="100%" height="100%" />
-        </i> 什么是推广员？
-      </p>
+      <!-- text-align: center 给ul加 这样文字居中-->
+      <ul style="margin-top: 5px;">
+        <li @click="goPath('/article/detail/191106163453163417')">
+          <p
+            class="warn-content"
+            style="margin-top: 200px;"
+            @click="goPath('/article/detail/191106163453163417')"
+          >
+            <i>
+              <img src="../../assets/goods/warn.png" width="100%" height="100%" />
+            </i> 什么是推广员？
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
 </template>

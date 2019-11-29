@@ -22,7 +22,7 @@
           <!-- 原价 -->
           <span
             style="color: #FFF; background-color:#ff5162 ;font-size: 18px; border-top-left-radius: 15%;
-    padding: 5px; position: absolute; bottom: 0; right: 0;"
+            padding: 5px; position: absolute; bottom: 0; right: 0;"
             v-if="goods.resProductSkuList"
             v-html="moneyFormat(goods.resProductSkuList[0].salesPrice)"
           ></span>
@@ -35,12 +35,12 @@
           />
         </div>
       </div>
-      <div style="padding: 10px; padding-top: 20px; height: 100px;">
+      <div style="padding: 10px; padding-top: 20px; height: 120px;">
         <div class="literaldetail">
           <p style="font-size: 18px; font-weight: 600;">{{goods.name}}</p>
           <p
             style="background-color:#C0C0C0; color:#EA5D6E; width: 65px;
-            padding: 2px; border-top-right-radius: 3px;
+            padding: 3px; border-top-right-radius: 3px;
                 border-bottom-right-radius: 3px;"
           >
             <span
@@ -50,8 +50,10 @@
           </p>
           <br />
           <p
-            style="margin-top: 0px; margin-bottom: 0px; font-size: 16px; font-weight: 600; color:#C0C0C0;"
+            style="font-size: 15px; font-weight: 400; color:#C0C0C0; white-space: nowrap; text-overflow: ellipsis;overflow: hidden;
+                   word-break: break-all; line-height: 15px;"
           >来自{{$init.user.cacheUser.nickname}}的精选推荐</p>
+		  <br />
         </div>
         <!-- 二维码 -->
         <div class="qrcode">

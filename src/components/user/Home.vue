@@ -79,13 +79,13 @@
         <ul>
           <li @click="goPath('/user/updatePhone')">
             <i class="iconfont">
-              <img src="@/assets/user/bdsj.png" width="100%" />
+              <img src="@/assets/user/bdsj.png" width="100%" height="100%" />
             </i>
             <p>绑定手机</p>
           </li>
           <li @click="goPath('/user/promotionCenter')">
             <i class="iconfont">
-              <img src="@/assets/user/tgzx.png" width="100%" />
+              <img src="@/assets/user/tgzx.png" width="100%" height="100%" />
             </i>
             <p>推广中心</p>
           </li>

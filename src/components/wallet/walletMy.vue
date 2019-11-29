@@ -37,9 +37,11 @@
         <!-- <button class="now_yue">本月</button> -->
         <button class="select_yue" @click="toSelectDate">{{selectDate}}</button>
         <div class="main-left-content">
-          <span>收入：¥{{userFundLog.earning | priceFormat}}</span>
-          <br />
-          <span>支出：¥{{userFundLog.disbursement | priceFormat}}</span>
+          <div style="margin-left: 70px;">
+            <span>收入：¥{{userFundLog.earning | priceFormat}}</span>
+            <br />
+            <span>支出：¥{{userFundLog.disbursement | priceFormat}}</span>
+          </div>
           <i class="moreIcon" @click="goIncomeStatistics(userFund.userId)">
             <img src="../../assets/xb/more.png" width="100%" height="100%" />
           </i>
@@ -470,11 +472,10 @@ header {
   line-height: 44px;
 }
 
-
 .dateModel .typeYear .van-picker-column:nth-child(1) {
   left: 25%;
 }
-.dateModel .van-hairline--top-bottom{
+.dateModel .van-hairline--top-bottom {
   top: 76%;
 }
 

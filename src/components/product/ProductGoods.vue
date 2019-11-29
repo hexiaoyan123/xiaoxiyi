@@ -89,7 +89,7 @@
     <!-- 服务保障开始 -->
     <div class="base-list" @click="goEv(3)">
       <div class="base-list-item">
-        <div class="base-list-item-left" v-if="specGood.id">服务保障</div>
+        <div class="base-list-item-left" v-if="specGood.id">服务保障 & 推广说明</div>
         <div class="base-list-item-right">
           <i class="icon-more"></i>
         </div>
@@ -171,30 +171,30 @@
     <!-- 拼团弹出结束 -->
     <!-- 分享弹出卡片-->
     <div class="sharelayer" v-if="shareStatus" @click="showclose">
-     <div class="share">
-      <i class="iocn-close" id="choice-close" @click="showclose"></i>
-      <div class="sharediv">
-        <div class="friends" align="center" @click="guide()">
-          <figure class="img">
-            <img src="@/assets/xb/pyq.png" width="50px" height="50px" alt />
-          </figure>
-          <p class="title">分享至朋友圈</p>
-        </div>
-        <div class="wechat" align="center" @click="guide()">
-          <figure class="img">
-            <img src="@/assets/xb/wx.png" width="50px" height="50px" alt />
-          </figure>
-          <p class="title">分享至微信好友</p>
-        </div>
-        <div class="saveimg" align="center" @click="goPath('/productShare/')">
-          <figure class="img">
-            <img src="@/assets/xb/baocun.png" width="50px" height="50px" alt />
-          </figure>
-          <p class="title">保存至手机</p>
+      <div class="share">
+        <i class="iocn-close" id="choice-close" @click="showclose"></i>
+        <div class="sharediv">
+          <div class="friends" align="center" @click="guide()">
+            <figure class="img">
+              <img src="@/assets/xb/pyq.png" width="50px" height="50px" alt />
+            </figure>
+            <p class="title">分享至朋友圈</p>
+          </div>
+          <div class="wechat" align="center" @click="guide()">
+            <figure class="img">
+              <img src="@/assets/xb/wx.png" width="50px" height="50px" alt />
+            </figure>
+            <p class="title">分享至微信好友</p>
+          </div>
+          <div class="saveimg" align="center" @click="goPath('/productShare/')">
+            <figure class="img">
+              <img src="@/assets/xb/baocun.png" width="50px" height="50px" alt />
+            </figure>
+            <p class="title">保存至手机</p>
+          </div>
         </div>
       </div>
-     </div>
-	</div>
+    </div>
     <!-- 分享朋友圈指引 -->
     <div class="mongolia" v-if="guideStatus" @click="guideShow">
       <div class="arrow">
@@ -921,7 +921,7 @@ export default {
   padding-right: 20px;
   padding-left: 20px;
 }
-.sharelayer{
+.sharelayer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
